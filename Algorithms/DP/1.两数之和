@@ -1,1 +1,11 @@
-
+class Solution(object):                          #定义一个名为 Solution 的类，object表示该类继承自基础对象
+    def twoSum(self, nums, target):              #def：定义函数的关键字。self：这是 Python 类成员函数的固定首个参数，代表“这个实例本身”。 nums 和 target：这是输入参数。
+        """                                     
+        :type nums: List[int]                    #文档字符串，是开发者写给开发者看的注释。nums 应该是一个整数列表，target 应该是一个整数 (int)。rtype (Return Type)：你的函数必须返回一个整数列表
+        :type target: int
+        :rtype: List[int]
+        """
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                if nums[i]+nums[j]==target:
+                    return[i,j]
